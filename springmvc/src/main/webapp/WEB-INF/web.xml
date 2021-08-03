@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         id="WebApp_ID" version="3.1">
+<servlet>
+
+
+
+
+
+    <!--这里写的这个名字是又讲究的
+   如果我们不去修改spring配置文件默认的位置，那么springmvc
+    他回去web-info下面找一个叫做springmvc-servlet.xml的文件-->
+    <servlet-name>springmvc</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <!--重新命名-->
+    <!--<init-param>-->
+        <!--<param-name>namespace</param-name>-->
+        <!--<param-value>mvc-servlet</param-value>-->
+    <!--</init-param>-->
+
+    <!--上下文位置的配置-->
+    <init-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:mvc-servlet.xml</param-value>
+    </init-param>
+</servlet>
+    <!--这里servlet映射配置-->
+
+<servlet-mapping>
+    <servlet-name>springmvc</servlet-name>
+    <!--这里统一写斜杠-->
+    <url-pattern>/</url-pattern>
+</servlet-mapping>
+
+         
+
+</web-app>
