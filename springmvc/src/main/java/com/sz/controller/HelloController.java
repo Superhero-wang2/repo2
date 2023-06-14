@@ -12,7 +12,7 @@ public class HelloController  implements Controller {
     @Override
     public ModelAndView handleRequest(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse) throws Exception {
        ModelAndView modelAndView=new ModelAndView();
-       modelAndView.addObject("girl","慧慧");
+       modelAndView.addObject("girl","慧慧wqeqw");
        modelAndView.setViewName("girl");
         return modelAndView;
     }
